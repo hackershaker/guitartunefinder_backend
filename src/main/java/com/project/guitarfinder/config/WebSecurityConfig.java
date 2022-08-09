@@ -31,7 +31,8 @@ public class WebSecurityConfig {
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
-		corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+		corsConfiguration.setAllowedOrigins(
+				Arrays.asList("http://localhost:3000", "https://guitartunefinder-frontend.herokuapp.com/"));
 		corsConfiguration.setAllowedMethods(Arrays.asList("POST", "GET", "OPTIONS", "PUT", "DELETE"));
 		corsConfiguration.setAllowedHeaders(
 				Arrays.asList("Origin", "Content-type", "Access-Control-Allow-Origin", "Access-Control-Max-Age"));
